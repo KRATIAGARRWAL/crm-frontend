@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { saveSegment } from '../api/api'; // ✅ import the wrapper
+import { saveSegment } from '../api/api'; 
 
-export default function SaveCampaignForm({ rules, logic }) {
+export default function SaveCampaignForm({ rules, logic, message }) {
   const [name, setName] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -14,7 +14,8 @@ export default function SaveCampaignForm({ rules, logic }) {
     }
 
     try {
-      const response = await saveSegment({ name, rules, logic });
+      const response = await saveSegment({ name, rules, logic, message });
+
 
       if (!response.ok && response.status) {
         const err = await response.json();
