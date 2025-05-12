@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import image from '../assets/image.png'
 import {
   RocketIcon,
   UsersIcon,
@@ -121,7 +122,7 @@ export default function HomePage() {
           className="w-full flex justify-center"
         >
           <motion.img
-            src="/dashboard-preview.png"
+            src={image}
             alt="CRM Dashboard Preview"
             className="w-full max-w-md rounded-xl shadow-lg"
             whileHover={{ 
