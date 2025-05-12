@@ -4,7 +4,7 @@ export default function AuthButtons() {
   const { user, logout } = useAuth();
 
   const handleLogin = () => {
-    window.location.href = 'http://localhost:5000/auth/google';
+    window.location.href = `${import.meta.env.VITE_BASE_URL.replace('/api', '')}/auth/google`;
   };
 
   return (
