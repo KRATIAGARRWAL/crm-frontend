@@ -4,7 +4,7 @@ export default function AuthButtons() {
   const { user, logout } = useAuth();
 
   const handleLogin = () => {
-    window.location.href = `${import.meta.env.VITE_BASE_URL.replace('/api', '')}/auth/google/callback`;
+    window.location.href = "https://crm-backend-d0ny.onrender.com/auth/google";
     
   };
 

@@ -1,6 +1,6 @@
 
 export default function Login() {
-  const url=`${import.meta.env.VITE_BASE_URL.replace('/api', '')}/auth/google/callback`
+  const url="https://crm-backend-d0ny.onrender.com/auth/google"
   console.log(url);
   return (
     // <div className="flex justify-center items-center h-screen bg-gray-100">
