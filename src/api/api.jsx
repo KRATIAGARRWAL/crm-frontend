@@ -1,6 +1,7 @@
-const BASE_URL = 'http://localhost:5000/api';
-const AI_URL = 'http://localhost:5001/api'; 
-
+// const BASE_URL = 'http://localhost:5000/api';
+// const AI_URL = 'http://localhost:5001/api'; 
+const BASE_URL = import.meta.env.VITE_BASE_URL;
+const AI_URL = import.meta.env.VITE_AI_URL;
 const token = localStorage.getItem('token');
 const authHeader = token ? { Authorization: `Bearer ${token}` } : {};
 
