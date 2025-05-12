@@ -16,8 +16,8 @@ export default function CustomerForm({ onCustomerAdded }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 p-4 bg-white shadow rounded">
-      <h2 className="text-xl font-semibold">Add Customer</h2>
+    <form onSubmit={handleSubmit} className="space-y-4 p-4 mt-6 bg-gradient-to-br from-white to-teal-60 shadow rounded border border-teal-200">
+      <h2 className="text-xl font-semibold text-teal-800">Add Customer</h2>
       {['name', 'email', 'phone', 'totalSpend', 'visits', 'lastActive'].map(field => (
         <input
           key={field}
@@ -26,10 +26,10 @@ export default function CustomerForm({ onCustomerAdded }) {
           placeholder={field}
           value={form[field]}
           onChange={handleChange}
-          className="w-full border p-2 rounded"
+          className="w-full border border-teal-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
         />
       ))}
-      <button className="bg-blue-600 text-white px-4 py-2 rounded">Add</button>
+      <button className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded">Add Customer</button>
     </form>
   );
 }

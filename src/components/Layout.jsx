@@ -5,14 +5,14 @@ export default function Layout({ children }) {
   const { user, logout } = useAuth();
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex h-screen bg-gradient-to-br from-white to-teal-100">
       {/* Sidebar */}
-      <aside className="w-64 bg-white shadow-md p-4">
-        <h1 className="text-2xl font-bold text-blue-600 mb-6">Mini CRM</h1>
+      <aside className="w-64 bg-gradient-to-br from-white to-teal-80 shadow-md p-4 border-r border-teal-100">
+        <h1 className="text-2xl font-bold text-teal-700 mb-6">CRM Pro</h1>
         <nav className="space-y-4">
-          <Link to="/dataIngestion" className="block text-gray-700 hover:text-blue-600">Data Ingestion</Link>
-          <Link to="/segment" className="block text-gray-700 hover:text-blue-600">Segment Builder</Link>
-          <Link to="/campaigns" className="block text-gray-700 hover:text-blue-600">Campaigns</Link>
+          <Link to="/dataIngestion" className="block text-teal-800 hover:text-teal-600">Data Ingestion</Link>
+          <Link to="/segment" className="block text-teal-800 hover:text-teal-600">Segment Builder</Link>
+          <Link to="/campaigns" className="block text-teal-800 hover:text-teal-600">Campaigns</Link>
         </nav>
       </aside>
 
@@ -22,7 +22,7 @@ export default function Layout({ children }) {
           {user ? (
             <div className="flex items-center gap-3">
               <img src={user.picture} alt="profile" className="w-8 h-8 rounded-full" />
-              <span className="text-sm font-medium">{user.name}</span>
+              <span className="text-sm font-medium text-teal-900">{user.name}</span>
               <button
                 onClick={logout}
                 className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
@@ -33,7 +33,7 @@ export default function Layout({ children }) {
           ) : (
             <a
               href="http://localhost:5000/auth/google"
-              className="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"
+              className="bg-teal-600 text-white px-3 py-1 rounded hover:bg-teal-700"
             >
               Login with Google
             </a>

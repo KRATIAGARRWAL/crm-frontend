@@ -19,13 +19,13 @@ export default function OrderForm({ onOrderAdded }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 p-4 bg-white shadow rounded mt-6 ">
-      <h2 className="text-xl font-semibold ">Add Order</h2>
+    <form onSubmit={handleSubmit} className="space-y-4 p-4 bg-gradient-to-br from-white to-teal-60 shadow rounded border border-teal-200  mt-6 ">
+      <h2 className="text-xl font-semibold text-teal-800">Add Order</h2>
       <select
         name="customerId"
         value={form.customerId}
         onChange={handleChange}
-        className="w-full border p-2 rounded"
+        className="w-full border border-teal-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
         required
       >
         <option value="">Select Customer</option>
@@ -39,10 +39,10 @@ export default function OrderForm({ onOrderAdded }) {
         placeholder="Order Amount"
         value={form.amount}
         onChange={handleChange}
-        className="w-full border p-2 rounded"
+        className="w-full border border-teal-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-teal-500"
         required
       />
-      <button className="bg-green-600 text-white px-4 py-2 rounded">Add Order</button>
+      <button className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded">Add Order</button>
     </form>
   );
 }
