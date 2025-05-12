@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import Login from '../pages/Login';
 
 export default function Layout({ children }) {
   const { user, logout } = useAuth();
@@ -31,12 +32,7 @@ export default function Layout({ children }) {
               </button>
             </div>
           ) : (
-            <a
-              href="http://localhost:5000/auth/google"
-              className="bg-teal-600 text-white px-3 py-1 rounded hover:bg-teal-700"
-            >
-              Login with Google
-            </a>
+            <Login/>
           )}
         </div>
 
